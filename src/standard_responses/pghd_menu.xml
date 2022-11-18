@@ -1,0 +1,7 @@
+<Response>
+    <Say>Welcome to PGHD registration service</Say>
+    <GetDigits timeout="30" finishOnKey="#" callbackUrl="/pghd_cardio_handler">
+        <Say>Press one followed by the hash sign to provide your readings from your digital heartrate monitor</Say>
+        <Say>Press two followed by the hash sign to abort this call</Say>
+    </GetDigits>
+</Response>

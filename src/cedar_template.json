@@ -1,0 +1,72 @@
+{
+  "@context": {
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "pav": "http://purl.org/pav/",
+    "schema": "http://schema.org/",
+    "oslc": "http://open-services.net/ns/core#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "rdfs:label": {
+      "@type": "xsd:string"
+    },
+    "schema:isBasedOn": {
+      "@type": "@id"
+    },
+    "schema:name": {
+      "@type": "xsd:string"
+    },
+    "schema:description": {
+      "@type": "xsd:string"
+    },
+    "pav:derivedFrom": {
+      "@type": "@id"
+    },
+    "pav:createdOn": {
+      "@type": "xsd:dateTime"
+    },
+    "pav:createdBy": {
+      "@type": "@id"
+    },
+    "pav:lastUpdatedOn": {
+      "@type": "xsd:dateTime"
+    },
+    "oslc:modifiedBy": {
+      "@type": "@id"
+    },
+    "skos:notation": {
+      "@type": "xsd:string"
+    },
+    "Client/Patient Card Number": "https://schema.metadatacenter.org/properties/4d081701-ca7d-4c7e-8e0f-d16c7ed5b479",
+    "Date": "https://schema.metadatacenter.org/properties/23e28d52-097c-4571-a384-05c7f22d31d4",
+    "Has Blood Pressure Monitor Data": "https://schema.metadatacenter.org/properties/bf2483bc-1133-4c7c-b339-74959f5c4e44",
+    "Heart Rate": "https://schema.metadatacenter.org/properties/135e42ca-8a54-4d5b-b405-ad91b9e86803",
+    "Systolic Blood Pressure": "https://schema.metadatacenter.org/properties/22a7feaf-b07e-48e7-ad0b-232ef293275d",
+    "Diastolic Blood Pressure": "https://schema.metadatacenter.org/properties/bbcdf524-348f-495a-9dde-2d1de0a6d50c"
+  },
+  "Client/Patient Card Number": {
+    "@value": null,
+    "@type": "xsd:int"
+  },
+  "Date": {
+    "@value": null,
+    "@type": "xsd:date"
+  },
+  "Has Blood Pressure Monitor Data": {
+    "@value": "No"
+  },
+  "Heart Rate": {
+    "@value": null,
+    "@type": "xsd:int"
+  },
+  "Systolic Blood Pressure": {
+    "@value": null,
+    "@type": "xsd:int"
+  },
+  "Diastolic Blood Pressure": {
+    "@value": null,
+    "@type": "xsd:int"
+  },
+"schema:name": "",
+"schema:isBasedOn": "https://repo.metadatacenter.org/templates/6ee557b3-78c5-485c-8d4d-8d5d3c59208d",
+"schema:description": ""
+}

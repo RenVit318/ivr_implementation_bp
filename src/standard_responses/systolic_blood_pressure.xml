@@ -1,0 +1,8 @@
+<Response>
+    <GetDigits timeout="30" finishOnKey="#" callbackUrl="/systolic_blood_pressure">
+        <Say>
+            Fill in your systolic blood pressure followed by the hash sign.
+            If you do not have this data, press zero followed by the hash sign.
+        </Say>
+    </GetDigits>
+</Response>
