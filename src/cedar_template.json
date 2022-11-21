@@ -51,8 +51,8 @@
     "@value": null,
     "@type": "xsd:date"
   },
-  "Has Blood Pressure Monitor Data": {
-    "@value": "No"
+  "Data Collected via IVR": {
+    "@value": "Yes"
   },
   "Heart Rate": {
     "@value": null,
