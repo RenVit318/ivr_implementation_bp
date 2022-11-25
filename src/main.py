@@ -28,8 +28,7 @@ def cardio_data_collector():
         response += f'<Say>Your provided systolic bloodpressure is {cardio_data["systolic_blood_pressure"]}</Say>'
         response += f'<Say>Your provided diastolic bloodpressure is {cardio_data["diastolic_blood_pressure"]}</Say>'
         response += '<GetDigits timeout="30" finishOnKey="#" callbackUrl="/submit">'
-        response += '<Say>If this is correct and you want to submit, press one followed by the hash sign</Say>'
-        response += '<Say>If you want to abort press two followed by the hash sign</Say>'
+        response += '<Say>If this is correct and you want to submit, press one followed by the hash sign. If you want to abort press two followed by the hash sign</Say>'
         response += '</GetDigits></Response>'
 
         return response
