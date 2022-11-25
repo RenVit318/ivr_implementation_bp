@@ -1,8 +1,5 @@
 <Response>
-    <GetDigits timeout="30" finishOnKey="#" callbackUrl="/diastolic_blood_pressure">
-        <Say>
-            Fill in your diastolic blood pressure followed by the hash sign.
-            If you do not have this data, press zero followed by the hash sign.
-        </Say>
+    <GetDigits timeout="30" finishOnKey="#" callbackUrl="https://9b1e-80-114-159-161.eu.ngrok.io/diastolic_blood_pressure">
+        <Say>Fill in your diastolic blood pressure followed by the hash sign. If you do not have this data, press zero followed by the hash sign.</Say>
     </GetDigits>
 </Response>

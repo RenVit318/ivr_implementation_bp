@@ -43,26 +43,26 @@
     "Systolic Blood Pressure": "https://schema.metadatacenter.org/properties/22a7feaf-b07e-48e7-ad0b-232ef293275d",
     "Diastolic Blood Pressure": "https://schema.metadatacenter.org/properties/bbcdf524-348f-495a-9dde-2d1de0a6d50c"
   },
-  "Client/Patient Card Number": {
-    "@value": null,
+  "PatientID": {
+    "@value": 1,
     "@type": "xsd:int"
   },
   "Date": {
     "@value": null,
     "@type": "xsd:date"
   },
-  "Data Collected via IVR": {
+  "DataCollectedViaIVR": {
     "@value": "Yes"
   },
-  "Heart Rate": {
+  "Pulse Number": {
     "@value": null,
     "@type": "xsd:int"
   },
-  "Systolic Blood Pressure": {
+  "Blood Pressure (Systolic)": {
     "@value": null,
     "@type": "xsd:int"
   },
-  "Diastolic Blood Pressure": {
+  "Blood Pressure (Diastolic)": {
     "@value": null,
     "@type": "xsd:int"
   },

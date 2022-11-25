@@ -1,8 +1,5 @@
 <Response>
-    <GetDigits timeout="30" finishOnKey="#" callbackUrl="/heart_rate">
-        <Say>
-            Fill in your heartrate followed by the hash sign.
-            If you do not have this data, press zero followed by the hash sign.
-        </Say>
+    <GetDigits timeout="30" finishOnKey="#" callbackUrl="https://9b1e-80-114-159-161.eu.ngrok.io/heart_rate">
+        <Say>Fill in your heartrate followed by the hash sign. If you do not have this data, press zero followed by the hash sign.</Say>
     </GetDigits>
 </Response>

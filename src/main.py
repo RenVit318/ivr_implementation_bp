@@ -36,16 +36,16 @@ def cardio_data_collector():
 
 def send_data_to_cedar():
     cedar_url = 'https://resource.metadatacenter.org/template-instances'
-    cedar_api_key = 'apiKey d02cda83b3f4ba283ffae0a699b31e9bcf0a2b7aa3835b6328ab1cf066f6c7ad'
+    cedar_api_key = 'apiKey 62838dcb5b6359a1a93baeeef907669813ec431437b168efde17a61c254b3355'
     current_time = datetime.now()
 
     cedar_template = open('cedar_template.json')
     data = json.load(cedar_template)
-    data['Data Collected via IVR']['@value'] = 'yes'
+    data['DataCollectedViaIVR']['@value'] = 'yes'
     data['Date']['@value'] = current_time.strftime('%Y-%m-%d')
-    data['Heart Rate']['@value'] = cardio_data['heart_rate']
-    data['Systolic Blood Pressure']['@value'] = cardio_data['systolic_blood_pressure']
-    data['Diastolic Blood Pressure']['@value'] = cardio_data['diastolic_blood_pressure']
+    data['Pulse Number']['@value'] = cardio_data['heart_rate']
+    data['Blood Pressure (Systolic)']['@value'] = cardio_data['systolic_blood_pressure']
+    data['Blood Pressure (Diastolic)']['@value'] = cardio_data['diastolic_blood_pressure']
     data['schema:name'] = f'PGHD {current_time.strftime("%d/%m/%Y %H:%M:%S")}'
     cedar_template.close()
 
