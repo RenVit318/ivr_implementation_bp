@@ -36,15 +36,15 @@
     "skos:notation": {
       "@type": "xsd:string"
     },
-    "Client/Patient Card Number": "https://schema.metadatacenter.org/properties/4d081701-ca7d-4c7e-8e0f-d16c7ed5b479",
-    "Date": "https://schema.metadatacenter.org/properties/23e28d52-097c-4571-a384-05c7f22d31d4",
-    "Has Blood Pressure Monitor Data": "https://schema.metadatacenter.org/properties/bf2483bc-1133-4c7c-b339-74959f5c4e44",
-    "Heart Rate": "https://schema.metadatacenter.org/properties/135e42ca-8a54-4d5b-b405-ad91b9e86803",
-    "Systolic Blood Pressure": "https://schema.metadatacenter.org/properties/22a7feaf-b07e-48e7-ad0b-232ef293275d",
-    "Diastolic Blood Pressure": "https://schema.metadatacenter.org/properties/bbcdf524-348f-495a-9dde-2d1de0a6d50c"
+    "Date": "http://purl.org/dc/elements/1.1/date",
+    "PatientID": "http://www.semanticweb.org/ftuha/ontologies/2021/5/FRMO-01untitled-ontology-175/PatientID",
+    "Blood Pressure (Systolic)": "http://www.isibang.ac.in/ns/codo#BP-systolic",
+    "Pulse Number": "http://semantic-dicom.org/dcm#PulseNumber",
+    "DataCollectedViaIVR": "https://schema.metadatacenter.org/properties/cf7ce679-582a-4e82-9612-0bfc5cfd29e2",
+    "Blood Pressure (Diastolic)": "http://www.isibang.ac.in/ns/codo#BP-diastolic"
   },
   "PatientID": {
-    "@value": 1,
+    "@value": null,
     "@type": "xsd:int"
   },
   "Date": {
@@ -66,7 +66,7 @@
     "@value": null,
     "@type": "xsd:int"
   },
-"schema:name": "",
+"schema:name": null,
 "schema:isBasedOn": "https://repo.metadatacenter.org/templates/6ee557b3-78c5-485c-8d4d-8d5d3c59208d",
 "schema:description": ""
 }

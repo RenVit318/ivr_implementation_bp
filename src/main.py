@@ -40,11 +40,11 @@ def send_data_to_cedar():
 
     cedar_template = open('cedar_template.json')
     data = json.load(cedar_template)
-    data['DataCollectedViaIVR']['@value'] = 'yes'
+    data['DataCollectedViaIVR']['@value'] = 'Yes'
     data['Date']['@value'] = current_time.strftime('%Y-%m-%d')
-    data['Pulse Number']['@value'] = cardio_data['heart_rate']
-    data['Blood Pressure (Systolic)']['@value'] = cardio_data['systolic_blood_pressure']
-    data['Blood Pressure (Diastolic)']['@value'] = cardio_data['diastolic_blood_pressure']
+    data['Pulse Number']['@value'] = str(cardio_data['heart_rate'])
+    data['Blood Pressure (Systolic)']['@value'] = str(cardio_data['systolic_blood_pressure'])
+    data['Blood Pressure (Diastolic)']['@value'] = str(cardio_data['diastolic_blood_pressure'])
     data['schema:name'] = f'PGHD {current_time.strftime("%d/%m/%Y %H:%M:%S")}'
     cedar_template.close()
 
