@@ -37,11 +37,11 @@
       "@type": "xsd:string"
     },
     "Date": "http://purl.org/dc/elements/1.1/date",
-    "PatientID": "http://www.semanticweb.org/ftuha/ontologies/2021/5/FRMO-01untitled-ontology-175/PatientID",
-    "Blood Pressure (Systolic)": "http://www.isibang.ac.in/ns/codo#BP-systolic",
-    "Pulse Number": "http://semantic-dicom.org/dcm#PulseNumber",
-    "DataCollectedViaIVR": "https://schema.metadatacenter.org/properties/cf7ce679-582a-4e82-9612-0bfc5cfd29e2",
-    "Blood Pressure (Diastolic)": "http://www.isibang.ac.in/ns/codo#BP-diastolic"
+    "PatientID": "https://github.com/abdullahikawu/PGHD/blob/main/vocabularies/PatientID",
+    "DataCollectedViaIVR": "https://github.com/abdullahikawu/PGHD/blob/main/vocabularies/DataCollectedViaIVR",
+    "Pulse Number": "https://github.com/abdullahikawu/PGHD/blob/main/vocabularies/PulseNumber",
+    "Blood Pressure (Systolic)": "https://github.com/abdullahikawu/PGHD/blob/main/vocabularies/SystolicBloodPressure",
+    "Blood Pressure (Diastolic)": "https://github.com/abdullahikawu/PGHD/blob/main/vocabularies/DiastolicBloodPressure"
   },
   "PatientID": {
     "@value": null,
@@ -68,5 +68,5 @@
   },
 "schema:name": null,
 "schema:isBasedOn": "https://repo.metadatacenter.org/templates/6ee557b3-78c5-485c-8d4d-8d5d3c59208d",
-"schema:description": ""
+"schema:description": "PGHD Blood Pressure data communicated to CEDAR using the Africa's Talking IVR service"
 }
