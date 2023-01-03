@@ -40,6 +40,7 @@ def send_data_to_cedar():
 
     cedar_template = open('cedar_template.json')
     data = json.load(cedar_template)
+    data['PatientID']['@value'] = '1234' # TODO: Add patient ID request
     data['DataCollectedViaIVR']['@value'] = 'Yes'
     data['Date']['@value'] = current_time.strftime('%Y-%m-%d')
     data['Pulse Number']['@value'] = str(cardio_data['heart_rate'])
