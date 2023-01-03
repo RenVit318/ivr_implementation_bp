@@ -1,0 +1,71 @@
+@prefix PGHD-COMM: <https://github.com/abdullahikawu/PGHD/blob/main/vocabularies/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<https://github.com/abdullahikawu/PGHD/> a skos:ConceptScheme;
+  dct:contributor <https://orcid.org/0000-0003-2531-9539>;
+  dct:creator <https://orcid.org/0000-0003-2328-4117>;
+  dct:description "This is the vocabulary for the communication of PGHD in the context of the VODANA project."@en;
+  dct:title "Vocabulary for PGHD communication methods"@en;
+  pav:createdOn "2022-12-02T00:00:00+01:00"@en;
+  pav:lastUpdatedOn "2022-12-12T00:00:00+01:01"@en;
+  pav:version "0.0.5"@en;
+  skos:hasTopConcept PGHD-COMM:BloodPressureReading, PGHD-COMM:CommunicationDetail;
+  skos:prefLabel "Vocabulary for PGHD communication methods"@en .
+
+PGHD-COMM:CommunicationDetail a skos:Concept;
+  dct:creator <https://orcid.org/0000-0003-2328-4117>;
+  skos:definition "Information about Medium of PGHD Communication and UserInformation"@en;
+  skos:inScheme <https://github.com/abdullahikawu/PGHD/>;
+  skos:narrower PGHD-COMM:DataCollectedViaIVR, PGHD-COMM:PatientID;
+  skos:prefLabel "CommunicationDetail"@en;
+  skos:topConceptOf <https://github.com/abdullahikawu/PGHD/> .
+
+PGHD-COMM:DataCollectedViaIVR a skos:Concept;
+  dct:creator <https://orcid.org/0000-0003-2328-4117>;
+  skos:broader PGHD-COMM:CommunicationDetail;
+  skos:definition "Was this PGHD data collected using the Interactive Voice Response service?"@en;
+  skos:inScheme <https://github.com/abdullahikawu/PGHD/>;
+  skos:prefLabel "DataCollectedViaIVR"@en .
+
+PGHD-COMM:PatientID a skos:Concept;
+  dct:creator <https://orcid.org/0000-0003-2531-9539>;
+  skos:broader PGHD-COMM:CommunicationDetail;
+  skos:definition "Patient or Client ID"@en;
+  skos:exactMatch <http://www.semanticweb.org/ftuha/ontologies/2021/5/FRMO-01untitled-ontology-175/PatientID>;
+  skos:inScheme <https://github.com/abdullahikawu/PGHD/>;
+  skos:prefLabel "PatientID"@en .
+
+PGHD-COMM:BloodPressureReading a skos:Concept;
+  dct:creator <https://orcid.org/0000-0003-2531-9539>;
+  skos:definition "Blood Pressure Information about the patient"@en;
+  skos:inScheme <https://github.com/abdullahikawu/PGHD/>;
+  skos:narrower PGHD-COMM:DiastolicBloodPressure, PGHD-COMM:PulseNumber, PGHD-COMM:SystolicBloodPressure;
+  skos:prefLabel "BloodPressureReading"@en;
+  skos:topConceptOf <https://github.com/abdullahikawu/PGHD/> .
+
+PGHD-COMM:PulseNumber a skos:Concept;
+  dct:creator <https://orcid.org/0000-0003-2531-9539>;
+  skos:broader PGHD-COMM:BloodPressureReading;
+  skos:definition "Pulse number - normal pulse for healthy adults ranges from 60 to 100 beats per minute."@en;
+  skos:exactMatch <http://semantic-dicom.org/dcm#PulseNumber>;
+  skos:inScheme <https://github.com/abdullahikawu/PGHD/>;
+  skos:prefLabel "PulseNumber"@en .
+
+PGHD-COMM:SystolicBloodPressure a skos:Concept;
+  dct:creator <https://orcid.org/0000-0003-2531-9539>;
+  skos:broader PGHD-COMM:BloodPressureReading;
+  skos:definition "Systolic blood pressure, measures the pressure in your arteries when your heart beats."@en;
+  skos:exactMatch <http://www.isibang.ac.in/ns/codo#BP-systolic>;
+  skos:inScheme <https://github.com/abdullahikawu/PGHD/>;
+  skos:prefLabel "SystolicBloodPressure"@en .
+
+PGHD-COMM:DiastolicBloodPressure a skos:Concept;
+  dct:creator <https://orcid.org/0000-0003-2531-9539>;
+  skos:broader PGHD-COMM:BloodPressureReading;
+  skos:definition "Diastolic blood pressure, measures the pressure in your arteries when your heart rests between beats"@en;
+  skos:exactMatch <http://www.isibang.ac.in/ns/codo#BP-diastolic>;
+  skos:inScheme <https://github.com/abdullahikawu/PGHD/>;
+  skos:prefLabel "DiastolicBloodPressure"@en .
