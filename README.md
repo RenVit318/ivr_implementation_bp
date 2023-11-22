@@ -1,4 +1,4 @@
-# Data Science in Practice: Fieldlab-5
+# IVR Implementation : Blood Pressure
 
 Repository containing mock data and code for the integration of Patient Generated Health Data (PGHD) with the VODAN-Africa Network.
 
