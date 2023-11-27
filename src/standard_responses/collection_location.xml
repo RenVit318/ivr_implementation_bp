@@ -1,0 +1,6 @@
+<Response>
+    <Say>Please record what your location was during data collection and finish with the hash sign.</Say>
+    <GetDigits timeout="30" finishOnKey="#" callbackUrl="https://9b1e-80-114-159-161.eu.ngrok.io/collection_location">
+        <Say>If you were at home press one. If you were not at home press two.</Say>
+    </GetDigits>
+</Response>

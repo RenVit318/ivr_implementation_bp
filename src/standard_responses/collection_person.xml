@@ -1,0 +1,6 @@
+<Response>
+    <Say>Please record who collected the data and finish with the hash sign.</Say>
+    <GetDigits timeout="30" finishOnKey="#" callbackUrl="https://9b1e-80-114-159-161.eu.ngrok.io/collection_person">
+        <Say>If you collected it yourself press one. If it was collected by your caretaker press two.</Say>
+    </GetDigits>
+</Response>

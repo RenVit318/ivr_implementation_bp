@@ -1,0 +1,6 @@
+<Response>
+    <Say>Please record what your position was during data collection and finish with the hash sign.</Say>
+    <GetDigits timeout="30" finishOnKey="#" callbackUrl="https://9b1e-80-114-159-161.eu.ngrok.io/collection_position">
+        <Say>If you were laying down press one. If you were seated press two. If you were standing press three.</Say>
+    </GetDigits>
+</Response>

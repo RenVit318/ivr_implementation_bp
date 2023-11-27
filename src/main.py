@@ -7,7 +7,10 @@ app = Flask(__name__)
 
 cardio_data = {'heart_rate': None,
                'systolic_blood_pressure': None,
-               'diastolic_blood_pressure': None}
+               'diastolic_blood_pressure': None,
+               'collection_position': None,
+               'collection_location': None,
+               'collection_person': None}
 
 def cardio_data_collector():
     if cardio_data['heart_rate'] is None:
@@ -20,6 +23,18 @@ def cardio_data_collector():
         return response
     elif cardio_data['diastolic_blood_pressure'] is None:
         with open('standard_responses/diastolic_blood_pressure.xml') as f:
+            response = f.read()
+        return response
+    elif cardio_data['collection_position'] is None:
+        with open('standard_responses/collection_position.xml') as f:
+            response = f.read()
+        return response
+    elif cardio_data['collection_location'] is None:
+        with open('standard_responses/collection_location.xml') as f:
+            response = f.read()
+        return response
+    elif cardio_data['collection_person'] is None:
+        with open('standard_responses/collection_person.xml') as f:
             response = f.read()
         return response
     else:
@@ -36,6 +51,7 @@ def cardio_data_collector():
 def send_data_to_cedar():
     cedar_url = 'https://resource.metadatacenter.org/template-instances'
     cedar_api_key = 'apiKey 62838dcb5b6359a1a93baeeef907669813ec431437b168efde17a61c254b3355'
+    ontology_prefix = 'https://github.com/abdullahikawu/PGHD/tree/main/vocabularies/'
     current_time = datetime.now()
 
     cedar_template = open('cedar_template.json')
@@ -46,7 +62,10 @@ def send_data_to_cedar():
     data['Pulse Number']['@value'] = str(cardio_data['heart_rate'])
     data['Blood Pressure (Systolic)']['@value'] = str(cardio_data['systolic_blood_pressure'])
     data['Blood Pressure (Diastolic)']['@value'] = str(cardio_data['diastolic_blood_pressure'])
-    data['schema:name'] = f'PGHD {current_time.strftime("%d/%m/%Y %H:%M:%S")}'
+    data['CollectionPosition']['@value'] = ontology_prefix + str(cardio_data['collection_position'])
+    data['CollectionLocation']['@value'] = ontology_prefix + str(cardio_data['collection_location'])
+    data['CollectionPerson']['@value'] = ontology_prefix + str(cardio_data['collection_person'])
+    data['schema:name'] = f'PGHD_BP {current_time.strftime("%d/%m/%Y %H:%M:%S")}'
     cedar_template.close()
 
     requests.post(cedar_url, json=data, headers={'Content-Type': 'application/json',
@@ -57,6 +76,9 @@ def clear_cardio_data():
     cardio_data['heart_rate'] = None
     cardio_data['systolic_blood_pressure'] = None
     cardio_data['diastolic_blood_pressure'] = None
+    cardio_data['collection_position'] = None
+    cardio_data['collection_location'] = None
+    cardio_data['collection_person'] = None
 
 @app.route("/pghd_handler", methods=['POST'])
 def pghd_handler():
@@ -99,6 +121,46 @@ def diastolic_blood_pressure():
         cardio_data['diastolic_blood_pressure'] = digits
 
     return cardio_data_collector()
+
+
+@app.route("/collection_position", methods=['POST']):
+def collection_position():
+    digits = request.values.get("dtmfDigits", None)
+    if digits is not None:
+        if digits == 1:
+            cardio_data['collection_position'] = 'Laying'
+        elif digits == 2:
+            cardio_data['collection_position'] = 'Sitting'
+        elif digits == 3
+            cardio_data['collection_position'] = 'Standing'
+
+    return cardio_data_collector()
+
+
+@app.route("/collection_location", methods=['POST'])
+def collection_location():
+    digits = request.values.get("dtmfDigits", None)
+    if digits is not None:
+        if digits == 1:
+            cardio_data['collection_location'] = 'Home'
+        elif digits == 2:
+            cardio_data['collection_location'] = 'Outside'
+
+    return cardio_data_collector()
+
+
+@app.route("/collection_person", methods=['POST'])
+def collection_person():
+    digits = request.values.get("dtmfDigits", None)
+    if digits is not None:
+        if digits == 1:
+            cardio_data['collection_person'] = 'Patient'
+        elif digits == 2:
+            cardio_data['collection_person'] = 'Caregiver'
+    
+    return cardio_data_collector()
+
+
 
 
 @app.route("/submit", methods=['POST'])

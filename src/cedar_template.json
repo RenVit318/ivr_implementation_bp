@@ -37,36 +37,51 @@
       "@type": "xsd:string"
     },
     "Date": "http://purl.org/dc/elements/1.1/date",
-    "PatientID": "https://github.com/abdullahikawu/PGHD/blob/main/vocabularies/PatientID",
-    "DataCollectedViaIVR": "https://github.com/abdullahikawu/PGHD/blob/main/vocabularies/DataCollectedViaIVR",
-    "Pulse Number": "https://github.com/abdullahikawu/PGHD/blob/main/vocabularies/PulseNumber",
-    "Blood Pressure (Systolic)": "https://github.com/abdullahikawu/PGHD/blob/main/vocabularies/SystolicBloodPressure",
-    "Blood Pressure (Diastolic)": "https://github.com/abdullahikawu/PGHD/blob/main/vocabularies/DiastolicBloodPressure"
-  },
-  "PatientID": {
-    "@value": null,
-    "@type": "xsd:int"
+    "Unique Individual Identifer": "http://www.vodan-totafrica.info/vocs/vgt/UniqueIndividualIdentifer",
+    "hasPulseRate": "http://aimlab.cs.uoregon.edu/smash/ontologies/biomarker.owl#hasPulseRate",
+    "hasDiastolicBloodPressureValue": "http://aimlab.cs.uoregon.edu/smash/ontologies/biomarker.owl#hasDiastolicBloodPressureValue",
+    "hasSystolicBloodPressureValue": "http://aimlab.cs.uoregon.edu/smash/ontologies/biomarker.owl#hasSystolicBloodPressureValue",
+    "CollectionPosition": "https://github.com/abdullahikawu/PGHD/tree/main/vocabularies/CollectionPosition",
+    "CollectionLocation": "https://github.com/abdullahikawu/PGHD/tree/main/vocabularies/CollectionLocation",
+    "CollectionPerson": "https://github.com/abdullahikawu/PGHD/tree/main/vocabularies/CollectionPerson",
+    "DataCollectedViaIVR": "https://github.com/abdullahikawu/PGHD/tree/main/vocabularies/DataCollectedViaIVR"
   },
   "Date": {
-    "@value": null,
+    "@value": "2023-11-22",
     "@type": "xsd:date"
+  },
+  "Unique Individual Identifer": {
+    "@value": "1234",
+    "@type": "xsd:int"
+  },
+  "hasPulseRate": {
+    "@value": "80",
+    "@type": "xsd:decimal"
+  },
+  "hasDiastolicBloodPressureValue": {
+    "@value": "60",
+    "@type": "xsd:decimal"
+  },
+  "hasSystolicBloodPressureValue": {
+    "@value": "120",
+    "@type": "xsd:decimal"
+  },
+  "CollectionPosition": {
+    "@id": "https://github.com/abdullahikawu/PGHD/tree/main/vocabularies/Sitting",
+    "rdfs:label": "Sitting"
+  },
+  "CollectionLocation": {
+    "@id": "https://github.com/abdullahikawu/PGHD/tree/main/vocabularies/Home",
+    "rdfs:label": "Home"
+  },
+  "CollectionPerson": {
+    "@id": "https://github.com/abdullahikawu/PGHD/tree/main/vocabularies/Patient",
+    "rdfs:label": "Patient"
   },
   "DataCollectedViaIVR": {
     "@value": "Yes"
   },
-  "Pulse Number": {
-    "@value": null,
-    "@type": "xsd:int"
-  },
-  "Blood Pressure (Systolic)": {
-    "@value": null,
-    "@type": "xsd:int"
-  },
-  "Blood Pressure (Diastolic)": {
-    "@value": null,
-    "@type": "xsd:int"
-  },
-"schema:name": null,
-"schema:isBasedOn": "https://repo.metadatacenter.org/templates/6ee557b3-78c5-485c-8d4d-8d5d3c59208d",
-"schema:description": "PGHD Blood Pressure data communicated to CEDAR using the Africa's Talking IVR service"
+  "schema:isBasedOn": "https://repo.metadatacenter.org/templates/d11645cd-03d1-42d7-ae2b-eab5856f6a1b",
+  "schema:name": "PGHD_BP_Template metadata",
+  "schema:description": "CEDAR Template to collect Patient Generated Health Data collected using a digital blood pressure monitor, and communicated via interactive voice response. The vocabulary used in this template is such that it is interoperable with the VODANA templates."
 }

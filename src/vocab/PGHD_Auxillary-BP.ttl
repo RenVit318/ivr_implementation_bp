@@ -1,0 +1,152 @@
+@prefix schema: <http://schema.org/> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix xls2rdf: <https://xls2rdf.sparna.fr/vocabulary#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skosthes: <http://purl.org/iso25964/skos-thes#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix PGHD: <https://github.com/abdullahikawu/PGHD/tree/main/vocabularies/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+
+<https://github.com/abdullahikawu/PGHD/tree/main/vocabularies/> a skos:ConceptScheme;
+  skos:prefLabel "Auxillary information surrounding PGHD measurement of blood pressure"@en;
+  dct:title "Auxillary information surrounding PGHD measurement of blood pressure"@en;
+  dct:description "This vocabulary contains terms surrounding the measurement of blood pressure related PGHD"@en;
+  dct:creator <https://orcid.org/0000-0003-2328-4117>;
+  dct:contributor <https://orcid.org/0000-0003-2531-9539>;
+  pav:createdOn "2022-12-12T00:00:00+01:00"@en;
+  pav:lastUpdatedOn "2023-11-13T14:40:00+01:00"@en;
+  pav:version "1.0"@en;
+  skos:hasTopConcept PGHD:CommunicationDetail, PGHD:CollectionDetail .
+
+PGHD:CommunicationDetail a skos:Concept;
+  skos:prefLabel "CommunicationDetail"@en;
+  skos:definition "Details surrounding the communication of PGHD"@en;
+  dct:creator <https://orcid.org/0000-0003-2328-4117>;
+  dct:contributor <https://orcid.org/0000-0001-6875-5360>;
+  skos:narrower PGHD:DataCollectedViaIVR;
+  skos:inScheme <https://github.com/abdullahikawu/PGHD/tree/main/vocabularies/>;
+  skos:topConceptOf <https://github.com/abdullahikawu/PGHD/tree/main/vocabularies/> .
+
+PGHD:DataCollectedViaIVR a skos:Concept;
+  skos:prefLabel "DataCollectedViaIVR"@en;
+  skos:definition "Was the data collected using the Africa's Talking IVR Implementation"@en;
+  skos:broader PGHD:CommunicationDetail;
+  dct:creator <https://orcid.org/0000-0003-2328-4117>;
+  dct:contributor <https://orcid.org/0000-0001-6875-5360>;
+  skos:inScheme <https://github.com/abdullahikawu/PGHD/tree/main/vocabularies/> .
+
+PGHD:CollectionDetail a skos:Concept;
+  skos:prefLabel "CollectionDetail"@en;
+  skos:definition "Details surrounding the communication of PGHD"@en;
+  dct:creator <https://orcid.org/0000-0003-2328-4117>;
+  dct:contributor <https://orcid.org/0000-0001-6875-5360>;
+  skos:narrower PGHD:CollectionPosition, PGHD:CollectionLocation, PGHD:CollectionDevice,
+    PGHD:CollectionPerson;
+  skos:inScheme <https://github.com/abdullahikawu/PGHD/tree/main/vocabularies/>;
+  skos:topConceptOf <https://github.com/abdullahikawu/PGHD/tree/main/vocabularies/> .
+
+PGHD:CollectionPosition a skos:Concept;
+  skos:prefLabel "CollectionPosition"@en;
+  skos:definition "The position of the patient when the PGHD was collected"@en;
+  skos:broader PGHD:CollectionDetail;
+  dct:creator <https://orcid.org/0000-0003-2328-4117>;
+  dct:contributor <https://orcid.org/0000-0001-6875-5360>;
+  skos:narrower PGHD:Sitting, PGHD:Standing, PGHD:Laying;
+  skos:inScheme <https://github.com/abdullahikawu/PGHD/tree/main/vocabularies/> .
+
+PGHD:Sitting a skos:Concept;
+  skos:prefLabel "Sitting"@en;
+  skos:definition "In a seated position on e.g. a couch or a chair"@en;
+  skos:broader PGHD:CollectionPosition;
+  dct:creator <https://orcid.org/0000-0003-2328-4117>;
+  dct:contributor <https://orcid.org/0000-0001-6875-5360>;
+  skos:inScheme <https://github.com/abdullahikawu/PGHD/tree/main/vocabularies/> .
+
+PGHD:Standing a skos:Concept;
+  skos:prefLabel "Standing"@en;
+  skos:definition "In a standing position"@en;
+  skos:broader PGHD:CollectionPosition;
+  dct:creator <https://orcid.org/0000-0003-2328-4117>;
+  dct:contributor <https://orcid.org/0000-0001-6875-5360>;
+  skos:inScheme <https://github.com/abdullahikawu/PGHD/tree/main/vocabularies/> .
+
+PGHD:Laying a skos:Concept;
+  skos:prefLabel "Laying"@en;
+  skos:definition "In a horizontal position on e.g. a bed or a couch"@en;
+  skos:broader PGHD:CollectionPosition;
+  dct:creator <https://orcid.org/0000-0003-2328-4117>;
+  dct:contributor <https://orcid.org/0000-0001-6875-5360>;
+  skos:inScheme <https://github.com/abdullahikawu/PGHD/tree/main/vocabularies/> .
+
+PGHD:CollectionLocation a skos:Concept;
+  skos:prefLabel "CollectionLocation"@en;
+  skos:definition "The broad type of location of the patient when the PGHD was collected"@en;
+  skos:broader PGHD:CollectionDetail;
+  dct:creator <https://orcid.org/0000-0003-2328-4117>;
+  dct:contributor <https://orcid.org/0000-0001-6875-5360>;
+  skos:narrower PGHD:Home, PGHD:Outside;
+  skos:inScheme <https://github.com/abdullahikawu/PGHD/tree/main/vocabularies/> .
+
+PGHD:Home a skos:Concept;
+  skos:prefLabel "Home"@en;
+  skos:definition "At home or another familiar location where the patient is comfortable"@en;
+  skos:broader PGHD:CollectionLocation;
+  dct:creator <https://orcid.org/0000-0003-2328-4117>;
+  dct:contributor <https://orcid.org/0000-0001-6875-5360>;
+  skos:inScheme <https://github.com/abdullahikawu/PGHD/tree/main/vocabularies/> .
+
+PGHD:Outside a skos:Concept;
+  skos:prefLabel "Outside"@en;
+  skos:definition "Neither at home nor in the clinic e.g. while at another location or travelling"@en;
+  skos:broader PGHD:CollectionLocation;
+  dct:creator <https://orcid.org/0000-0003-2328-4117>;
+  dct:contributor <https://orcid.org/0000-0001-6875-5360>;
+  skos:inScheme <https://github.com/abdullahikawu/PGHD/tree/main/vocabularies/> .
+
+PGHD:CollectionDevice a skos:Concept;
+  skos:prefLabel "CollectionDevice"@en;
+  skos:definition "The type of device used for collecting the PGHD"@en;
+  skos:broader PGHD:CollectionDetail;
+  dct:creator <https://orcid.org/0000-0003-2328-4117>;
+  dct:contributor <https://orcid.org/0000-0001-6875-5360>;
+  skos:editorialNote "Currently left empty for future work"@en;
+  skos:inScheme <https://github.com/abdullahikawu/PGHD/tree/main/vocabularies/> .
+
+PGHD:CollectionPerson a skos:Concept;
+  skos:prefLabel "CollectionPerson"@en;
+  skos:definition "The person that collected the PGHD"@en;
+  skos:broader PGHD:CollectionDetail;
+  dct:creator <https://orcid.org/0000-0003-2328-4117>;
+  dct:contributor <https://orcid.org/0000-0001-6875-5360>;
+  skos:narrower PGHD:Patient, PGHD:Caregiver;
+  skos:inScheme <https://github.com/abdullahikawu/PGHD/tree/main/vocabularies/> .
+
+PGHD:Patient a skos:Concept;
+  skos:prefLabel "Patient"@en;
+  skos:definition "The patient themselves"@en;
+  skos:broader PGHD:CollectionPerson;
+  dct:creator <https://orcid.org/0000-0003-2328-4117>;
+  dct:contributor <https://orcid.org/0000-0001-6875-5360>;
+  skos:inScheme <https://github.com/abdullahikawu/PGHD/tree/main/vocabularies/> .
+
+PGHD:Caregiver a skos:Concept;
+  skos:prefLabel "Caregiver"@en;
+  skos:definition "Another caregiver of the patient"@en;
+  skos:broader PGHD:CollectionPerson;
+  dct:creator <https://orcid.org/0000-0003-2328-4117>;
+  dct:contributor <https://orcid.org/0000-0001-6875-5360>;
+  skos:inScheme <https://github.com/abdullahikawu/PGHD/tree/main/vocabularies/> .
