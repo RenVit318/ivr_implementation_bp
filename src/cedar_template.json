@@ -47,41 +47,41 @@
     "DataCollectedViaIVR": "https://github.com/abdullahikawu/PGHD/tree/main/vocabularies/DataCollectedViaIVR"
   },
   "Date": {
-    "@value": "2023-11-22",
+    "@value": null,
     "@type": "xsd:date"
   },
   "Unique Individual Identifer": {
-    "@value": "1234",
+    "@value": null,
     "@type": "xsd:int"
   },
   "hasPulseRate": {
-    "@value": "80",
+    "@value": null,
     "@type": "xsd:decimal"
   },
   "hasDiastolicBloodPressureValue": {
-    "@value": "60",
+    "@value": null,
     "@type": "xsd:decimal"
   },
   "hasSystolicBloodPressureValue": {
-    "@value": "120",
+    "@value": null,
     "@type": "xsd:decimal"
   },
   "CollectionPosition": {
-    "@id": "https://github.com/abdullahikawu/PGHD/tree/main/vocabularies/Sitting",
+    "@id": null,
     "rdfs:label": "Sitting"
   },
   "CollectionLocation": {
-    "@id": "https://github.com/abdullahikawu/PGHD/tree/main/vocabularies/Home",
+    "@id": null,
     "rdfs:label": "Home"
   },
   "CollectionPerson": {
-    "@id": "https://github.com/abdullahikawu/PGHD/tree/main/vocabularies/Patient",
+    "@id": null,
     "rdfs:label": "Patient"
   },
   "DataCollectedViaIVR": {
-    "@value": "Yes"
+    "@value": null,
   },
   "schema:isBasedOn": "https://repo.metadatacenter.org/templates/d11645cd-03d1-42d7-ae2b-eab5856f6a1b",
-  "schema:name": "PGHD_BP_Template metadata",
+  "schema:name": null,
   "schema:description": "CEDAR Template to collect Patient Generated Health Data collected using a digital blood pressure monitor, and communicated via interactive voice response. The vocabulary used in this template is such that it is interoperable with the VODANA templates."
 }
